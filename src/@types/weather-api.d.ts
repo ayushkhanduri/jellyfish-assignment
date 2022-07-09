@@ -7,7 +7,7 @@ export type ICoordinates = {
 
 export type IWeather = {
     id: number,
-    main: string,
+    main: IWeatherTypes,
     description: string,
     icon: string
 }
@@ -89,3 +89,5 @@ export type IForecastResponse = {
     list: IForecastItem[],
     city: ICity
 }
+
+type IWeatherTypes = 'Clouds' | 'Clear' | 'Rain' | 'Snow' ; // KEEP ON ADDING OTHER STRINGS AND UPDATE THE WEATHER_ICON OBJECT
