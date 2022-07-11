@@ -53,7 +53,7 @@ function App() {
         !appContext.loader ? (
           <div>
             <WeatherWidgetUI weatherType={appContext?.weatherInfo?.weather[0]?.main} cityName={appContext?.weatherInfo?.name} temperature={Utils.kelvinToCelsius(appContext?.weatherInfo?.main?.temp)}/>
-            <PredictionWidgetUI />
+            <PredictionWidgetUI limit={3} rows={appContext?.forecastInfo?.list}/>
           </div>
         ) : <LoaderUI />
       }
